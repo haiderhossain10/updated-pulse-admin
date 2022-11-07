@@ -21,8 +21,8 @@ export default function Home() {
                     <img className="w-[14rem]" src={Phone} alt="phone..." />
                 </div>
                 <h2 className="text-[1.8rem] font-black text-center mt-6">
-                    Install
-                    <span className="text-white">PulseWiFi</span> app on <br />
+                    Install <span className="text-white">PulseWiFi </span> app
+                    on <br />
                     the Android or iOS for <br />
                     <span className="text-white">Seamless WiFi Experience</span>
                 </h2>
@@ -31,7 +31,7 @@ export default function Home() {
                     <AndroindButton />
                 </div>
             </div>
-            <section className="bg-hero bg-no-repeat bg-contain grow relative p-10">
+            <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] p-10">
                 <div className="p-4 flex justify-end">
                     <form>
                         <select className="!bg-transparent">
@@ -66,16 +66,16 @@ export default function Home() {
                     <form>
                         <div className="flex gap-2 mt-4">
                             <input
-                                className="w-[50px] border rounded-l px-2 focus:outline"
+                                className="w-[58px] border rounded-l px-2 focus:outline !appearance-none"
                                 type="number"
                                 placeholder="+91"
                             />
                             <input
-                                className="border px-2 grow focus:outline"
+                                className="border px-2 grow focus:outline !appearance-none"
                                 type="number"
                                 placeholder="+9933-711-955"
                             />
-                            <button className="h-10 bg-black text-white px-4 rounded">
+                            <button className="h-10 bg-black text-white px-4 rounded hover:bg-gray-900 duration-150">
                                 Continue
                             </button>
                         </div>
