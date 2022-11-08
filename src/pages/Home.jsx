@@ -59,7 +59,7 @@ export default function Home() {
                 </div>
             </div>
             <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-[750px] lg:h-auto">
-                <div className="p-4 flex justify-between items-center lg:justify-end">
+                <div className="flex justify-between items-center lg:justify-end">
                     <Link className="lg:hidden" to="/">
                         <img src={MobilePhone} />
                     </Link>
@@ -70,46 +70,48 @@ export default function Home() {
                         </select>
                     </form>
                 </div>
-                <div className="bg-black lg:w-[400px] rounded-lg relative mt-10 lg:mt-0">
-                    <h2 className="text-white text-[20px] font-black p-4">
-                        hola! you are connected to the PM-WANI WiFi network
-                    </h2>
-                    <svg
-                        className="absolute bottom-[-50px] right-6"
-                        width="60"
-                        // height="92"
-                        viewBox="0 0 104 92"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path d="M104 91.5L0 0H104V91.5Z" fill="black" />
-                    </svg>
-                </div>
-                <div className="lg:w-[450px] bg-white p-6 rounded-lg mt-20 lg:ml-10 relative z-10">
-                    <h4 className="text-2xl font-black">
-                        Enter Mobile Number to access the Internet
-                    </h4>
-                    <p className="text-sm pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec at risus maximus, suscipit lorem quis,
-                    </p>
-                    <form>
-                        <div className="flex flex-wrap gap-2 mt-4">
-                            <input
-                                className="w-[58px] h-10 border rounded-l px-2 focus:outline !appearance-none"
-                                type="number"
-                                placeholder="+91"
-                            />
-                            <input
-                                className="border h-10 px-2 grow focus:outline !appearance-none"
-                                type="number"
-                                placeholder="+9933-711-955"
-                            />
-                            <button className="h-10 w-full lg:w-auto bg-black text-white px-4 rounded hover:bg-gray-900 duration-150">
-                                Continue
-                            </button>
-                        </div>
-                    </form>
+                <div className="mt-20">
+                    <div className="bg-black lg:w-[400px] rounded-lg relative lg:mt-0">
+                        <h2 className="text-white text-[20px] font-black p-4">
+                            hola! you are connected to the PM-WANI WiFi network
+                        </h2>
+                        <svg
+                            className="absolute bottom-[-50px] right-6"
+                            width="60"
+                            // height="92"
+                            viewBox="0 0 104 92"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="M104 91.5L0 0H104V91.5Z" fill="black" />
+                        </svg>
+                    </div>
+                    <div className="lg:w-[450px] bg-white p-6 rounded-lg mt-20 lg:ml-10 relative z-10">
+                        <h4 className="text-2xl font-black">
+                            Enter Mobile Number to access the Internet
+                        </h4>
+                        <p className="text-sm pt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Donec at risus maximus, suscipit lorem quis,
+                        </p>
+                        <form>
+                            <div className="flex flex-wrap gap-2 mt-4">
+                                <input
+                                    className="w-[58px] h-10 border rounded-l px-2 focus:outline !appearance-none"
+                                    type="number"
+                                    placeholder="+91"
+                                />
+                                <input
+                                    className="border h-10 px-2 grow focus:outline !appearance-none"
+                                    type="number"
+                                    placeholder="+9933-711-955"
+                                />
+                                <button className="h-10 w-full lg:w-auto bg-black text-white px-4 rounded hover:bg-gray-900 duration-150">
+                                    Continue
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div className="lg:flex items-center gap-2 absolute bottom-4 right-20 hidden">
                     <div>

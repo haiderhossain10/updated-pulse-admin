@@ -3,7 +3,6 @@ import AndroindButton from "../components/button/AndroindButton";
 import AppleButton from "../components/button/AppleButton";
 import Logo from "./../assets/images/logo/logo.png";
 import MobilePhone from "./../assets/images/logo/mobile-logo.png";
-import Phone from "./../assets/images/phone.png";
 import Obj1 from "./../assets/images/bg-obj-1.png";
 import Obj2 from "./../assets/images/bg-obj-2.png";
 import Obj3 from "./../assets/images/bg-obj-3.png";
@@ -22,7 +21,7 @@ export default function Otp() {
                         </Link>
                     </div>
                     <div className="text-center px-6 py-10">
-                        <h2 className="text-white font-black text-[30px]">
+                        <h2 className="text-white font-black lg:text-[30px] text-xl">
                             Install{" "}
                             <span className="text-black">PulseWiFi</span> app on
                             the Android or iOS for Seamless WiFi Experience
@@ -33,7 +32,7 @@ export default function Otp() {
                         <AndroindButton />
                     </div>
                     <img
-                        className="absolute bottom-0 w-[13vw] transform -translate-x-1/2 left-1/2"
+                        className="absolute bottom-0 lg:w-[13vw] w-[30vw] transform -translate-x-1/2 left-1/2"
                         src={OtpPhone}
                         alt="otp phone"
                     />
@@ -59,8 +58,8 @@ export default function Otp() {
                         </div>
                     </div>
                 </div>
-                <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-[750px] lg:h-auto">
-                    <div className="p-4 flex justify-between items-center lg:justify-end">
+                <section className="grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-[750px] lg:h-auto">
+                    <div className="flex justify-between items-center lg:justify-end">
                         <Link className="lg:hidden" to="/">
                             <img src={MobilePhone} />
                         </Link>
@@ -71,7 +70,7 @@ export default function Otp() {
                             </select>
                         </form>
                     </div>
-                    <div className="w-[375px] ml-[10vw] mt-[20vh]">
+                    <div className="lg:w-[375px] w-full lg:ml-[10vw] lg:mt-[20vh] mt-[14vh] ml-auto">
                         <h2 className="text-[30px] font-black pb-4">
                             OTP Verification
                         </h2>
@@ -86,34 +85,32 @@ export default function Otp() {
                             </Link>{" "}
                             )
                         </p>
-                        <form action="">
-                            <div className="flex gap-6 py-8">
+                        <form>
+                            <div className="flex md:gap-6 py-8 justify-between md:justify-start">
                                 <input
-                                    className="h-[40px] w-[40px] text-center appearance-none"
+                                    className="h-[40px] w-[40px] text-center rounded-md"
                                     type="number"
-                                    value="0"
                                 />
                                 <input
-                                    className="h-[40px] w-[40px] text-center appearance-none"
+                                    className="h-[40px] w-[40px] text-center rounded-md"
                                     type="number"
-                                    value="0"
                                 />
                                 <input
-                                    className="h-[40px] w-[40px] text-center appearance-none"
+                                    className="h-[40px] w-[40px] text-center rounded-md"
                                     type="number"
-                                    value="0"
                                 />
                                 <input
-                                    className="h-[40px] w-[40px] text-center appearance-none"
+                                    className="h-[40px] w-[40px] text-center rounded-md"
                                     type="number"
-                                    value="0"
                                 />
                             </div>
-                            <div className="flex items-center gap-6">
-                                <button className="h-[50px] bg-black px-10 hover:bg-slate-900 duration-150 rounded-lg text-white">
+                            <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                                <button className="h-[50px] w-full lg:w-auto bg-black lg:px-10 hover:bg-slate-900 duration-150 rounded-lg text-white">
                                     Verify
                                 </button>
-                                <p>Resend OTP in 39 sec</p>
+                                <p className="text-[#7C7C7C] lg:text-black">
+                                    Resend OTP in 39 sec
+                                </p>
                             </div>
                         </form>
                     </div>
