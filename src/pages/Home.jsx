@@ -2,25 +2,31 @@ import { Link } from "react-router-dom";
 import AndroindButton from "../components/button/AndroindButton";
 import AppleButton from "../components/button/AppleButton";
 import Logo from "./../assets/images/logo/logo.png";
+import MobilePhone from "./../assets/images/logo/mobile-logo.png";
 import Phone from "./../assets/images/phone.png";
 import Obj1 from "./../assets/images/bg-obj-1.png";
 import Obj2 from "./../assets/images/bg-obj-2.png";
 import Obj3 from "./../assets/images/bg-obj-3.png";
 import LogoMin from "./../assets/images/logo-min.png";
+import WhiteLogoMin from "./../assets/images/white-logo-min.png";
 
 export default function Home() {
     return (
-        <section className="flex">
-            <div className="bg-primary basis-[550px] h-screen p-[20px] relative z-10">
-                <div className="pb-12">
+        <section className="flex flex-col lg:flex-row">
+            <div className="bg-primary basis-[550px] lg:h-screen p-[20px] relative z-10 order-last lg:order-first">
+                <div className="pb-12 hidden lg:block">
                     <Link to="/">
                         <img src={Logo} alt="logo..." />
                     </Link>
                 </div>
                 <div className="flex justify-center">
-                    <img className="w-[14rem]" src={Phone} alt="phone..." />
+                    <img
+                        className="lg:w-[14rem] w-[10rem]"
+                        src={Phone}
+                        alt="phone..."
+                    />
                 </div>
-                <h2 className="text-[1.8rem] font-black text-center mt-6">
+                <h2 className="lg:text-[1.8rem] text-[1.4rem] font-black text-center mt-6">
                     Install <span className="text-white">PulseWiFi </span> app
                     on <br />
                     the Android or iOS for <br />
@@ -30,9 +36,33 @@ export default function Home() {
                     <AppleButton />
                     <AndroindButton />
                 </div>
+                <div className="text-center mt-6 lg:hidden">
+                    <img
+                        className="m-auto mb-2"
+                        src={WhiteLogoMin}
+                        alt="logo min"
+                    />
+                    <p className="text-white text-sm">
+                        © 2022 - All Rights Reserved <br /> Simplifon
+                        Technologies Private Limited
+                    </p>
+                    <div className="text-white">
+                        <a className="text-sm" href="#">
+                            Terms and Conditions
+                        </a>{" "}
+                        |
+                        <a className="text-sm" href="#">
+                            {" "}
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
             </div>
-            <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] p-10">
-                <div className="p-4 flex justify-end">
+            <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-[750px] lg:h-auto">
+                <div className="p-4 flex justify-between items-center lg:justify-end">
+                    <Link className="lg:hidden" to="/">
+                        <img src={MobilePhone} />
+                    </Link>
                     <form>
                         <select className="!bg-transparent">
                             <option>English</option>
@@ -40,7 +70,7 @@ export default function Home() {
                         </select>
                     </form>
                 </div>
-                <div className="bg-black w-[400px] rounded-lg relative">
+                <div className="bg-black lg:w-[400px] rounded-lg relative mt-10 lg:mt-0">
                     <h2 className="text-white text-[20px] font-black p-4">
                         hola! you are connected to the PM-WANI WiFi network
                     </h2>
@@ -55,7 +85,7 @@ export default function Home() {
                         <path d="M104 91.5L0 0H104V91.5Z" fill="black" />
                     </svg>
                 </div>
-                <div className="w-[450px] bg-white p-6 rounded-lg mt-20 ml-10">
+                <div className="lg:w-[450px] bg-white p-6 rounded-lg mt-20 lg:ml-10 relative z-10">
                     <h4 className="text-2xl font-black">
                         Enter Mobile Number to access the Internet
                     </h4>
@@ -64,24 +94,24 @@ export default function Home() {
                         Donec at risus maximus, suscipit lorem quis,
                     </p>
                     <form>
-                        <div className="flex gap-2 mt-4">
+                        <div className="flex flex-wrap gap-2 mt-4">
                             <input
-                                className="w-[58px] border rounded-l px-2 focus:outline !appearance-none"
+                                className="w-[58px] h-10 border rounded-l px-2 focus:outline !appearance-none"
                                 type="number"
                                 placeholder="+91"
                             />
                             <input
-                                className="border px-2 grow focus:outline !appearance-none"
+                                className="border h-10 px-2 grow focus:outline !appearance-none"
                                 type="number"
                                 placeholder="+9933-711-955"
                             />
-                            <button className="h-10 bg-black text-white px-4 rounded hover:bg-gray-900 duration-150">
+                            <button className="h-10 w-full lg:w-auto bg-black text-white px-4 rounded hover:bg-gray-900 duration-150">
                                 Continue
                             </button>
                         </div>
                     </form>
                 </div>
-                <div className="flex items-center gap-2 absolute bottom-4 right-20">
+                <div className="lg:flex items-center gap-2 absolute bottom-4 right-20 hidden">
                     <div>
                         <div className="flex justify-end gap-2">
                             <a href="#">Terms and Conditions</a>
@@ -108,12 +138,12 @@ export default function Home() {
                 <img
                     src={Obj2}
                     alt="obj 2"
-                    className="absolute bottom-0 right-0 h-[80vh]"
+                    className="absolute bottom-0 right-0 h-[40vh] lg:h-[80vh]"
                 />
                 <img
                     src={Obj3}
                     alt="obj 3"
-                    className="absolute bottom-20 right-20 w-[10vw]"
+                    className="absolute bottom-10 lg:bottom-20 right-10 lg:right-20 lg:w-[10vw] w-[15vh]"
                 />
             </section>
         </section>

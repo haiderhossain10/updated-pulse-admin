@@ -1,6 +1,6 @@
 export default function AppleButton() {
     return (
-        <button className="flex items-center bg-black gap-[12px] py-[6px] px-6 rounded">
+        <button className="flex items-center bg-black gap-[12px] py-[6px] lg:px-6 px-2 rounded">
             <svg
                 width="25"
                 height="31"
@@ -18,8 +18,12 @@ export default function AppleButton() {
                 />
             </svg>
             <div className="text-start">
-                <p className="text-white text-xs uppercase">Download on the</p>
-                <h2 className="text-white font-black text-lg">App Store</h2>
+                <p className="text-white md:text-xs text-[8px] uppercase">
+                    Download on the
+                </p>
+                <h2 className="text-white font-black lg:text-lg text-[10px]">
+                    App Store
+                </h2>
             </div>
         </button>
     );

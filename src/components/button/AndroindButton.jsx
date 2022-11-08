@@ -1,6 +1,6 @@
 export default function AndroindButton() {
     return (
-        <button className="flex items-center bg-black gap-[12px] py-[6px] px-6 rounded">
+        <button className="flex items-center bg-black gap-[12px] py-[6px] lg:px-6 px-2 rounded">
             <svg
                 width="29"
                 height="31"
@@ -82,8 +82,12 @@ export default function AndroindButton() {
             </svg>
 
             <div className="text-start">
-                <p className="text-white text-xs uppercase">Get it on</p>
-                <h2 className="text-white font-black text-lg">Google Play</h2>
+                <p className="text-white md:text-xs text-[8px] uppercase">
+                    Get it on
+                </p>
+                <h2 className="text-white font-black lg:text-lg text-[10px]">
+                    Google Play
+                </h2>
             </div>
         </button>
     );
