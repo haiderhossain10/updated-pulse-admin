@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import AndroindButton from "../components/button/AndroindButton";
-import AppleButton from "../components/button/AppleButton";
-import Logo from "./../assets/images/logo/logo.png";
-import MobilePhone from "./../assets/images/logo/mobile-logo.png";
-import Phone from "./../assets/images/phone.png";
-import Obj1 from "./../assets/images/bg-obj-1.png";
-import Obj2 from "./../assets/images/bg-obj-2.png";
-import Obj3 from "./../assets/images/bg-obj-3.png";
-import LogoMin from "./../assets/images/logo-min.png";
-import WhiteLogoMin from "./../assets/images/white-logo-min.png";
+import AndroindButton from "@components/button/AndroindButton";
+import AppleButton from "@components/button/AppleButton";
+import Logo from "@imgs/logo/logo.png";
+import MobilePhone from "@imgs/logo/mobile-logo.png";
+import Phone from "@imgs/phone.png";
+import Obj1 from "@imgs/bg-obj-1.png";
+import Obj2 from "@imgs/bg-obj-2.png";
+import Obj3 from "@imgs/bg-obj-3.png";
+import FooterInfoDark from "@components/inc/FooterInfoDark";
+import FooterSidebarInfo from "@components/inc/FooterSidebarInfo";
 
 export default function Home() {
     return (
@@ -26,7 +26,7 @@ export default function Home() {
                         alt="phone..."
                     />
                 </div>
-                <h2 className="lg:text-[1.8rem] text-[1.4rem] font-black text-center mt-6">
+                <h2 className="lg:text-[1.8rem] text-[1.4rem] font-gilroy-bold text-center mt-6">
                     Install <span className="text-white">PulseWiFi </span> app
                     on <br />
                     the Android or iOS for <br />
@@ -36,27 +36,7 @@ export default function Home() {
                     <AppleButton />
                     <AndroindButton />
                 </div>
-                <div className="text-center mt-6 lg:hidden">
-                    <img
-                        className="m-auto mb-2"
-                        src={WhiteLogoMin}
-                        alt="logo min"
-                    />
-                    <p className="text-white text-sm">
-                        © 2022 - All Rights Reserved <br /> Simplifon
-                        Technologies Private Limited
-                    </p>
-                    <div className="text-white">
-                        <a className="text-sm" href="#">
-                            Terms and Conditions
-                        </a>{" "}
-                        |
-                        <a className="text-sm" href="#">
-                            {" "}
-                            Privacy Policy
-                        </a>
-                    </div>
-                </div>
+                <FooterSidebarInfo />
             </div>
             <section className="bg-hero bg-no-repeat bg-contain grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-[750px] lg:h-auto">
                 <div className="flex justify-between items-center lg:justify-end">
@@ -72,7 +52,7 @@ export default function Home() {
                 </div>
                 <div className="mt-20">
                     <div className="bg-black lg:w-[400px] rounded-lg relative lg:mt-0">
-                        <h2 className="text-white text-[20px] font-black p-4">
+                        <h2 className="text-white text-[20px] font-gilroy-bold p-4">
                             hola! you are connected to the PM-WANI WiFi network
                         </h2>
                         <svg
@@ -87,7 +67,7 @@ export default function Home() {
                         </svg>
                     </div>
                     <div className="lg:w-[450px] bg-white p-6 rounded-lg mt-20 lg:ml-10 relative z-10">
-                        <h4 className="text-2xl font-black">
+                        <h4 className="text-2xl font-gilroy-semibold">
                             Enter Mobile Number to access the Internet
                         </h4>
                         <p className="text-sm pt-2">
@@ -113,7 +93,7 @@ export default function Home() {
                         </form>
                     </div>
                 </div>
-                <div className="lg:flex items-center gap-2 absolute bottom-4 right-20 hidden">
+                {/* <div className="lg:flex items-center gap-2 absolute bottom-4 right-20 hidden">
                     <div>
                         <div className="flex justify-end gap-2">
                             <a href="#">Terms and Conditions</a>
@@ -131,7 +111,8 @@ export default function Home() {
                         src={LogoMin}
                         alt="logo mini"
                     />
-                </div>
+                </div> */}
+                <FooterInfoDark />
                 <img
                     src={Obj1}
                     alt="obj 1"

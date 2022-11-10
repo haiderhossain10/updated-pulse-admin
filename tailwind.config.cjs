@@ -9,6 +9,14 @@ module.exports = {
             },
             backgroundImage: {
                 hero: "url('./src/assets/images/bg.png')",
+                "hero-connected": "url('./src/assets/images/connected-bg.png')",
+                "connected-mobile-bg":
+                    "url('./src/assets/images/coonected-mobile-bg.png')",
+            },
+            fontFamily: {
+                "gilroy-bold": ["Gilroy-Bold"],
+                "gilroy-semibold": ["Gilroy-SemiBold"],
+                "gilroy-medium": ["Gilroy-Medium"],
             },
         },
     },

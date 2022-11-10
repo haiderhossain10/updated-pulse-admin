@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import Logo from "./../assets/images/logo/logo.png";
-import MobilePhone from "./../assets/images/logo/mobile-logo.png";
-import Obj1 from "./../assets/images/bg-obj-1.png";
-import Obj2 from "./../assets/images/bg-obj-2.png";
-import Obj3 from "./../assets/images/bg-obj-3.png";
-import LogoMin from "./../assets/images/logo-min.png";
-import WhiteLogoMin from "./../assets/images/white-logo-min.png";
-import ProfileSetupImg from "./../assets/images/profile-setup.png";
+import Logo from "@imgs/logo/logo.png";
+import MobilePhone from "@imgs/logo/mobile-logo.png";
+import Obj1 from "@imgs/bg-obj-1.png";
+import Obj2 from "@imgs/bg-obj-2.png";
+import Obj3 from "@imgs/bg-obj-3.png";
+import ProfileSetupImg from "@imgs/profile-setup.png";
+import FooterInfoDark from "@components/inc/FooterInfoDark";
+import FooterSidebarInfo from "@components/inc/FooterSidebarInfo";
 
 export default function ProfileSetup() {
     return (
-        <div>
+        <>
             <section className="flex flex-col lg:flex-row">
                 <div className="bg-primary lg:basis-[550px] basis-[400px] bas lg:h-screen p-[20px] relative z-10 order-last lg:order-first">
                     <div className="pb-12 hidden lg:block">
@@ -23,29 +23,7 @@ export default function ProfileSetup() {
                         src={ProfileSetupImg}
                         alt="profile setup"
                     />
-                    <div className="h-full lg:h-auto flex items-end justify-center">
-                        <div className="text-center mt-6 lg:hidden">
-                            <img
-                                className="m-auto mb-2"
-                                src={WhiteLogoMin}
-                                alt="logo min"
-                            />
-                            <p className="text-white text-sm">
-                                © 2022 - All Rights Reserved <br /> Simplifon
-                                Technologies Private Limited
-                            </p>
-                            <div className="text-white">
-                                <a className="text-sm" href="#">
-                                    Terms and Conditions
-                                </a>{" "}
-                                |
-                                <a className="text-sm" href="#">
-                                    {" "}
-                                    Privacy Policy
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <FooterSidebarInfo />
                 </div>
                 <section className="grow relative bg-[center_top_1.6rem] py-6 px-4 order-first lg:order-last h-auto pb-[20rem] lg:pb-0 lg:h-auto">
                     <div className="flex justify-between items-center lg:justify-end">
@@ -58,29 +36,6 @@ export default function ProfileSetup() {
                                 <option>Bangla</option>
                             </select>
                         </form>
-                    </div>
-
-                    <div className="lg:flex items-center gap-2 absolute bottom-4 right-20 hidden">
-                        <div>
-                            <div className="flex justify-end gap-2">
-                                <a href="#">Terms and Conditions</a>
-                                <a
-                                    className="border border-l-black pl-2"
-                                    href="#"
-                                >
-                                    Privacy Policy
-                                </a>
-                            </div>
-                            <p className="text-end ">
-                                © 2022 Simplifon Technologies Private Limited -
-                                All Rights Reserved
-                            </p>
-                        </div>
-                        <img
-                            className="border border-l-black pl-2 h-full"
-                            src={LogoMin}
-                            alt="logo mini"
-                        />
                     </div>
 
                     <div className="lg:w-[450px] lg:pl-[4vw] pt-[4vh]">
@@ -182,6 +137,8 @@ export default function ProfileSetup() {
                         </form>
                     </div>
 
+                    <FooterInfoDark />
+
                     <img
                         src={Obj1}
                         alt="obj 1"
@@ -199,6 +156,6 @@ export default function ProfileSetup() {
                     />
                 </section>
             </section>
-        </div>
+        </>
     );
 }

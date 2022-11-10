@@ -10,7 +10,7 @@ import OtpPhone from "@imgs/otp-phone.png";
 import FooterInfoDark from "@components/inc/FooterInfoDark";
 import FooterSidebarInfo from "@components/inc/FooterSidebarInfo";
 
-export default function Otp() {
+export default function EnterPassword() {
     return (
         <>
             <section className="flex flex-col lg:flex-row">
@@ -52,49 +52,32 @@ export default function Otp() {
                     </div>
                     <div className="lg:w-[375px] w-full lg:ml-[10vw] lg:mt-[20vh] mt-[14vh] ml-auto">
                         <h2 className="text-[30px] font-gilroy-semibold pb-4">
-                            OTP Verification
+                            Enter Password
                         </h2>
                         <p className="text-[16px]">
-                            Enter the 4 digit OTP sent to +91-9933711955 (
-                            Mobile Number Incorrect?{" "}
-                            <Link
-                                className="text-red-500 hover:underline"
-                                to="/change"
-                            >
-                                Change
-                            </Link>{" "}
-                            )
+                            The mobile number is registered with us. Enter the
+                            passowrd to continue
                         </p>
                         <form>
-                            <div className="flex md:gap-6 py-8 justify-between md:justify-start">
+                            <div className="py-8">
                                 <input
-                                    className="h-[40px] w-[40px] text-center rounded-md"
-                                    type="number"
-                                />
-                                <input
-                                    className="h-[40px] w-[40px] text-center rounded-md"
-                                    type="number"
-                                />
-                                <input
-                                    className="h-[40px] w-[40px] text-center rounded-md"
-                                    type="number"
-                                />
-                                <input
-                                    className="h-[40px] w-[40px] text-center rounded-md"
-                                    type="number"
+                                    className="h-[40px] w-full rounded-md px-4"
+                                    type="password"
                                 />
                             </div>
                             <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                                 <button className="h-[50px] w-full lg:w-auto bg-black lg:px-10 hover:bg-slate-900 duration-150 rounded-lg text-white">
-                                    Verify
+                                    Submit
                                 </button>
-                                <p className="text-[#7C7C7C] lg:text-black">
-                                    Resend OTP in 39 sec
-                                </p>
+                                <Link
+                                    to="/forgot-password"
+                                    className="lg:text-red-600 text-[#7C7C7C] underline lg:no-underline"
+                                >
+                                    Forgot Password?
+                                </Link>
                             </div>
                         </form>
                     </div>
-
                     <FooterInfoDark />
                     <img
                         src={Obj1}
