@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 import Logo from "@imgs/logo/logo.png";
 import MobilePhone from "@imgs/logo/mobile-logo.png";
 import Obj1 from "@imgs/bg-obj-1.png";
-import Obj2 from "@imgs/bg-obj-2.png";
-import Obj3 from "@imgs/bg-obj-3.png";
 import ProfileSetupImg from "@imgs/profile-setup.png";
 import FooterInfoDark from "@components/inc/FooterInfoDark";
 import FooterSidebarInfo from "@components/inc/FooterSidebarInfo";
-import ChoosePackCard from "../components/card/ChoosePackCard";
-import FooterInfoLight from "../components/inc/FooterInfoLight";
+import ChoosePackCard from "@components/card/ChoosePackCard";
+import FooterMobileInfo from "@components/inc/FooterMobileInfo";
 
 export default function ChoosePack() {
     return (
@@ -51,6 +49,7 @@ export default function ChoosePack() {
                         </div>
                     </div>
 
+                    <FooterMobileInfo />
                     <FooterInfoDark />
 
                     <img

@@ -2,9 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "@pages/Home";
 import Otp from "@pages/Otp";
 import ProfileSetup from "@pages/ProfileSetup";
-import EnterPassword from "./pages/EnterPassword";
-import Connected from "./pages/Connected";
-import ChoosePack from "./pages/ChoosePack";
+import EnterPassword from "@pages/EnterPassword";
+import Connected from "@pages/Connected";
+import ChoosePack from "@pages/ChoosePack";
+import ChoosePayment from "@pages/ChoosePayment";
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                 <Route path="/enter-password" element={<EnterPassword />} />
                 <Route path="/connected" element={<Connected />} />
                 <Route path="/choose-pack" element={<ChoosePack />} />
+                <Route path="/choose-payment" element={<ChoosePayment />} />
             </Routes>
         </>
     );
