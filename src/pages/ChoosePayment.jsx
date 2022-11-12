@@ -8,7 +8,7 @@ import FooterMobileInfo from "../components/inc/FooterMobileInfo";
 export default function ChoosePayment() {
     return (
         <>
-            <section className="bg-hero md:h-[800px] h-[1200px] bg-no-repeat bg-contain bg-[center_top_4rem] relative">
+            <section className="bg-hero h-[1200px] md:h-[900px]  bg-no-repeat bg-contain bg-[center_top_4rem] relative">
                 <HeaderSecond />
 
                 <div className="w-[90vw] m-auto">

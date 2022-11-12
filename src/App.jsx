@@ -6,6 +6,8 @@ import EnterPassword from "@pages/EnterPassword";
 import Connected from "@pages/Connected";
 import ChoosePack from "@pages/ChoosePack";
 import ChoosePayment from "@pages/ChoosePayment";
+import RechargeDone from "@pages/RechargeDone";
+import RechargeFailed from "@pages/RechargeFailed";
 
 export default function App() {
     return (
@@ -18,6 +20,8 @@ export default function App() {
                 <Route path="/connected" element={<Connected />} />
                 <Route path="/choose-pack" element={<ChoosePack />} />
                 <Route path="/choose-payment" element={<ChoosePayment />} />
+                <Route path="/recharge-done" element={<RechargeDone />} />
+                <Route path="/recharge-failed" element={<RechargeFailed />} />
             </Routes>
         </>
     );
