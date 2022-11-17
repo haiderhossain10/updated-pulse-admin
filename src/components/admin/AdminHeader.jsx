@@ -1,8 +1,18 @@
+import { useLocation } from "react-router-dom";
+
 export default function AdminHeader() {
+    const location = useLocation();
+
+    let page;
+    if (location?.pathname === "/dashboard") page = "Dashboard";
+    if (location?.pathname === "/recharge-history") page = "Recharge History";
+    if (location?.pathname === "/login-session") page = "Login Sessions ";
+    if (location?.pathname === "/active-devices") page = "Active Device";
+
     return (
         <>
             <header className="flex items-center justify-between py-4">
-                <h4 className="font-gilroy-semibold text-[20px]">Dashboard</h4>
+                <h4 className="font-gilroy-semibold text-[20px]">{page}</h4>
 
                 <button>
                     <svg

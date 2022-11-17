@@ -11,7 +11,7 @@ export default function Dashboard() {
                 <section className="pb-10">
                     <div className="flex items-center justify-between py-3">
                         <h4 className="text-[20px] font-gilroy-semibold">
-                            Login Dession
+                            Login Session
                         </h4>
 
                         <button className="flex items-center justify-center gap-2">

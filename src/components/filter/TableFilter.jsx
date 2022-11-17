@@ -1,8 +1,25 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function TableFilter() {
+    const [search, setSearch] = useState("");
+    const [date, setDate] = useState("");
+
+    const navigate = useNavigate();
+
+    /* -------------------------------------------------------------------------- */
+    /*                              Submit handler                              */
+    /* -------------------------------------------------------------------------- */
+    const handle = (e) => {
+        e.preventDefault();
+        const timestamp = new Date(date).getTime();
+        navigate(`/recharge-history?name=${search}&date=${timestamp}`);
+    };
+
     return (
         <>
             <div>
-                <form action="">
+                <form onSubmit={handle}>
                     <div className="flex items-center justify-between">
                         <div className="flex items-center  gap-4">
                             <div>
@@ -13,6 +30,9 @@ export default function TableFilter() {
                                     className="h-[32px] border  w-[183px] px-2 focus:outline-none rounded-md"
                                     type="text"
                                     placeholder="Enter"
+                                    required
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
                                 />
                             </div>
                             <div>
@@ -22,6 +42,9 @@ export default function TableFilter() {
                                 <input
                                     className="h-[32px] border  w-[183px] px-2 focus:outline-none rounded-md"
                                     type="date"
+                                    required
+                                    value={date}
+                                    onChange={(e) => setDate(e.target.value)}
                                 />
                             </div>
                         </div>
