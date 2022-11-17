@@ -8,6 +8,8 @@ export default function AdminHeader() {
     if (location?.pathname === "/recharge-history") page = "Recharge History";
     if (location?.pathname === "/login-session") page = "Login Sessions ";
     if (location?.pathname === "/active-devices") page = "Active Device";
+    if (location?.pathname === "/update-profile") page = "Update Profile";
+    if (location?.pathname === "/help") page = "Help";
 
     return (
         <>
