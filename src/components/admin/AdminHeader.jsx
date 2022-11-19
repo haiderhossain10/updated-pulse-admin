@@ -13,7 +13,7 @@ export default function AdminHeader() {
 
     return (
         <>
-            <header className="flex items-center justify-between py-4">
+            <section className="lg:flex items-center justify-between py-4 hidden">
                 <h4 className="font-gilroy-semibold text-[20px]">{page}</h4>
 
                 <button>
@@ -32,7 +32,7 @@ export default function AdminHeader() {
                         />
                     </svg>
                 </button>
-            </header>
+            </section>
         </>
     );
 }

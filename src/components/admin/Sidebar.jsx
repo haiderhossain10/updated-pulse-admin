@@ -5,7 +5,7 @@ export default function Sidebar() {
     const location = useLocation();
     return (
         <>
-            <div className="h-[calc(100vh-68px)] bg-primary lg:px-4 px-3 py-6 fixed top-0 bottom-0 lg:relative rounded-r-lg">
+            <div className="h-[calc(100vh-68px)] bg-primary lg:px-4 px-3 py-6 fixed top-0 bottom-0 lg:relative rounded-r-lg z-30 w-[60px] lg:w-auto left-[-62px] lg:left-0">
                 <Link to="/dashboard">
                     <img src={Logo} className="m-auto hidden lg:block" />
                 </Link>

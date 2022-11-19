@@ -3,7 +3,7 @@ import ConnectInternetImg from "@imgs/connect-internet.png";
 export default function ConnectInternet() {
     return (
         <>
-            <div className="grid grid-cols-3 items-center bg-[#FFF1F1] p-6 rounded-lg relative">
+            <div className="lg:grid grid-cols-3 items-center bg-[#FFF1F1] p-6 rounded-lg relative hidden">
                 <div>
                     <div className="mb-4">
                         <p className="text-[12px] text-[#777777]">PDO:</p>
