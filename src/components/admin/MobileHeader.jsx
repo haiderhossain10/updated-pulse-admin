@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import Logo from "@imgs/logo/logo.png";
+import { useDispatch } from "react-redux";
+import { hamburgerToggle } from "../../features/toggle/toggleSlice";
 
 export default function MobileHeader() {
+    const dispath = useDispatch();
+
+    const hamburger = () => {
+        dispath(hamburgerToggle());
+    };
     return (
         <>
             <section className="px-4 lg:hidden bg-primary relative">
-                <div className="flex items-center justify-between py-[14px] mb-8 relative z-20 ">
+                <div className="flex items-center justify-between py-[14px] relative z-20 ">
                     <Link to="/dashboard">
-                        <img src={Logo} />
+                        <img className="w-[100px]" src={Logo} />
                     </Link>
 
                     <div className="flex items-center gap-2">
@@ -31,6 +38,21 @@ export default function MobileHeader() {
                             className="h-[28px] w-[28px] rounded-[6px]"
                             src="https://gravatar.com/avatar/f85bc52be816eadd3968fe6e33eb66f2?s=400&d=wavatar&r=x"
                         />
+                        <button onClick={hamburger}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={30}
+                                height={30}
+                                fill="#fff"
+                                className="bi bi-list"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                                />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>

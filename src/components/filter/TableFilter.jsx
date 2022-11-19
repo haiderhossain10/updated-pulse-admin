@@ -18,16 +18,16 @@ export default function TableFilter() {
 
     return (
         <>
-            <div>
+            <div className="pt-10">
                 <form onSubmit={handle}>
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center  gap-4">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4">
                             <div>
                                 <label className="block text-[14px]">
                                     Search
                                 </label>
                                 <input
-                                    className="h-[32px] border  w-[183px] px-2 focus:outline-none rounded-md"
+                                    className="h-[32px] border w-full  md:w-[183px] px-2 focus:outline-none rounded-md"
                                     type="text"
                                     placeholder="Enter"
                                     required
@@ -40,7 +40,7 @@ export default function TableFilter() {
                                     Date
                                 </label>
                                 <input
-                                    className="h-[32px] border  w-[183px] px-2 focus:outline-none rounded-md"
+                                    className="h-[32px] border w-full  md:w-[183px] px-2 focus:outline-none rounded-md"
                                     type="date"
                                     required
                                     value={date}
@@ -48,7 +48,7 @@ export default function TableFilter() {
                                 />
                             </div>
                         </div>
-                        <button className="flex items-center gap-3 bg-black px-4 h-[40px] text-white rounded-lg hover:bg-[#222] duration-150">
+                        <button className="flex items-center gap-3 mt-4 md:mt-0 bg-black px-4 h-[40px] text-white rounded-lg hover:bg-[#222] duration-150">
                             <svg
                                 width={24}
                                 height={25}

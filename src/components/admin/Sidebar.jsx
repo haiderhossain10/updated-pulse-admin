@@ -1,11 +1,17 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "@imgs/logo/logo.png";
+import { useSelector } from "react-redux";
 
 export default function Sidebar() {
+    const { hamburger } = useSelector((state) => state.toggle) || {};
     const location = useLocation();
     return (
         <>
-            <div className="h-[calc(100vh-68px)] bg-primary lg:px-4 px-3 py-6 fixed top-0 bottom-0 lg:relative rounded-r-lg z-30 w-[60px] lg:w-auto left-[-62px] lg:left-0">
+            <div
+                className={`h-[calc(100vh-68px)] bg-primary lg:px-4 px-3 py-6 fixed top-0 bottom-0 lg:relative rounded-r-lg z-30 w-[60px] lg:w-auto lg:left-0 ${
+                    hamburger ? "left-0" : "left-[-62px]"
+                }`}
+            >
                 <Link to="/dashboard">
                     <img src={Logo} className="m-auto hidden lg:block" />
                 </Link>
@@ -238,7 +244,9 @@ export default function Sidebar() {
                                     strokeLinejoin="round"
                                 />
                             </svg>{" "}
-                            <span>Logout</span>
+                            <span className="hidden lg:inline-block">
+                                Logout
+                            </span>
                         </button>
                     </div>
                 </div>

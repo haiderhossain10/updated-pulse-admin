@@ -10,8 +10,8 @@ export default function UpdateProfile() {
     return (
         <>
             <Layout>
-                <div className="m-8">
-                    <div className="bg-[#F8F8F8] p-[6rem] w-[630px] m-auto rounded-lg">
+                <div className="md:m-8 pt-4">
+                    <div className="bg-[#F8F8F8] p-4 md:p-[6rem] md:w-[630px] m-auto rounded-lg">
                         <div className="h-[120px] w-[120px] relative border-[4px] border-white  rounded-full mb-6">
                             <img
                                 className="h-full w-full object-cover  rounded-full"

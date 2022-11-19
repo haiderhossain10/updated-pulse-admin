@@ -5,7 +5,7 @@ export default function LoginSessionTable() {
     const { table } = useSelector((state) => state.loginSession) || [];
     return (
         <>
-            <div className="hidden md:block">
+            <div className="overflow-x-scroll">
                 <table className="w-full border-collapse">
                     <thead>
                         <tr>
